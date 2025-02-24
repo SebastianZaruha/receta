@@ -1,0 +1,13 @@
+:host ::ng-deep .p-carousel .p-carousel-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+:host ::ng-deep .p-carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

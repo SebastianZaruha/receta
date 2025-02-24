@@ -1,0 +1,23 @@
+<div class="flex justify-center items-center h-screen relative">
+  <p-carousel
+    [value]="products"
+    [numVisible]="1"
+    [numScroll]="1"
+    [circular]="true"
+    class="w-1/2"
+  >
+    <ng-template let-product pTemplate="item">
+      <div class="text-center relative">
+        <!-- Imagen -->
+        <img
+          [src]="product.strMealThumb"
+          [alt]="product.strMeal"
+          class="mx-auto w-full max-w-md rounded-lg shadow-lg"
+        />
+        <!-- Nombre del plato -->
+        <div class="mt-4 font-bold text-xl">{{ product.strMeal }}</div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>
+
