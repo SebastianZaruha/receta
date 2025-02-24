@@ -8,13 +8,11 @@
   >
     <ng-template let-product pTemplate="item">
       <div class="text-center relative">
-        <!-- Imagen -->
         <img
           [src]="product.strMealThumb"
           [alt]="product.strMeal"
           class="mx-auto w-full max-w-md rounded-lg shadow-lg"
         />
-        <!-- Nombre del plato -->
         <div class="mt-4 font-bold text-xl">{{ product.strMeal }}</div>
       </div>
     </ng-template>

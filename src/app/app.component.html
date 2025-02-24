@@ -1,8 +1,12 @@
-<div>
-  <app-select (categoriaCambiada)="categoriaSeleccionada = $event"></app-select>
-  <app-carousel [categoriaSeleccionada]="categoriaSeleccionada"></app-carousel>
-
-  <app-buttons> </app-buttons>
+<div class="app-container">
+  <div class="content-wrapper">
+    <app-select
+      (categoriaCambiada)="categoriaSeleccionada = $event"
+    ></app-select>
+    <app-carousel
+      [categoriaSeleccionada]="categoriaSeleccionada"
+    ></app-carousel>
+    <app-buttons></app-buttons>
+  </div>
 </div>
-
 <router-outlet />

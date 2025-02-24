@@ -1,9 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import {
-  Component,
-  Input,
-  OnChanges
-} from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CarouselModule } from 'primeng/carousel';
 
@@ -14,7 +10,7 @@ import { CarouselModule } from 'primeng/carousel';
   styleUrl: './carousel.component.css',
 })
 export class CarouselComponent implements OnChanges {
-  @Input() categoriaSeleccionada!: string; // Recibe la categoría seleccionada
+  @Input() categoriaSeleccionada!: string;
   products: any[] = [];
 
   constructor(private http: HttpClient) {}
@@ -28,7 +24,7 @@ export class CarouselComponent implements OnChanges {
   cargarPlatosPorCategoria(categoria: string): void {
     const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoria}`;
     this.http.get<any>(url).subscribe((response) => {
-      this.products = response.meals || []; // Asegurar que no sea undefined
+      this.products = response.meals || [];
       console.log('Platos cargados:', this.products);
     });
   }

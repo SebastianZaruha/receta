@@ -14,7 +14,6 @@ export class ButtonsComponent {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    // Obtener todas las categorías de la API
     this.http
       .get<any>('https://www.themealdb.com/api/json/v1/1/list.php?c=list')
       .subscribe((data) => {
